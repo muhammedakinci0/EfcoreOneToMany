@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿/*using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using students.Data;
 using students.Models;
@@ -6,7 +6,6 @@ using students.Repositories;
 using phones.Controllers;
 using System.Security.AccessControl;
 using phones.Models;
-using Microsoft.JSInterop;
 
 namespace phones.Controllers
 {
@@ -22,13 +21,10 @@ namespace phones.Controllers
         [HttpGet]
         public IActionResult GetAllPhones()
         {
-        
             try
             {
                 var phones = _context.Phones.ToList();
-                
-
-                    return Ok(phones);
+                return Ok(phones);
             }
             catch (Exception ex)
             {
@@ -69,25 +65,6 @@ namespace phones.Controllers
             {
                 if (phone is null)
                     return BadRequest();
-
-
-                foreach (var number in _context.Phones)
-                {
-                    if (number.StudentId == phone.StudentId)
-                    {
-                        if (number.Default == true && phone.Default == true)
-                        {
-                            return NotFound(new
-                            {
-                                StatusCode = 404,
-                                message = $"Zaten bu kişinin öncelikli numarası var."
-                            });
-                        } 
-                    }
-
-                }
-
-
 
                 _context.Phones.Add(phone);
                 _context.SaveChanges();
@@ -138,3 +115,4 @@ namespace phones.Controllers
 
     }
 }
+*/

@@ -3921,34 +3921,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fgung\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages": {}
+    "C:\\Users\\Master\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fgung\\Downloads\\efcoreonetomany-main\\students.csproj",
+      "projectUniqueName": "C:\\Users\\Master\\Source\\Repos\\efcoreonetomany\\students.csproj",
       "projectName": "students",
-      "projectPath": "C:\\Users\\fgung\\Downloads\\efcoreonetomany-main\\students.csproj",
-      "packagesPath": "C:\\Users\\fgung\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fgung\\Downloads\\efcoreonetomany-main\\obj\\",
+      "projectPath": "C:\\Users\\Master\\Source\\Repos\\efcoreonetomany\\students.csproj",
+      "packagesPath": "C:\\Users\\Master\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Master\\Source\\Repos\\efcoreonetomany\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\fgung\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
+        "C:\\Users\\Master\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.devexpress.com/gNSFkVX8RB4vCneH8NOq1UbUfmrFt1ILFaPlyppPIojF7kvE54/api": {}
+        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
@@ -4014,7 +4008,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }

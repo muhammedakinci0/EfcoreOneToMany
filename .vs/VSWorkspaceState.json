@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Controllers",
+    "\\Data",
+    "\\Migrations",
+    "\\Models",
+    "\\Properties",
+    "\\Repositories"
   ],
-  "SelectedNode": "\\C:\\Users\\fgung\\Source\\Repos\\efcoreonetomany",
+  "SelectedNode": "\\Controllers\\PhonesController.cs",
   "PreviewInSolutionExplorer": false
 }
