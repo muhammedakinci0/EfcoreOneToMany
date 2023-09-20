@@ -68,6 +68,18 @@ namespace students.Controllers
                 if (student is null)
                     return BadRequest();
 
+                foreach (var x in _context.Students)
+                {
+                    if (x.Ad == student.Ad && x.Soyad == student.Soyad)
+                    {
+                        return NotFound(new
+                        {
+                            StatusCode=404,
+                            message = "Böyle isim'e ve soyisim'e sahip birisi var."
+                        });
+                    }
+                }
+
                 _context.Students.Add(student);
                 _context.SaveChanges();
                 return StatusCode(201, student);

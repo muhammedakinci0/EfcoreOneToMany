@@ -22,13 +22,13 @@ namespace phones.Controllers
         [HttpGet]
         public IActionResult GetAllPhones()
         {
-        
+
             try
             {
                 var phones = _context.Phones.ToList();
-                
 
-                    return Ok(phones);
+
+                return Ok(phones);
             }
             catch (Exception ex)
             {
@@ -71,6 +71,20 @@ namespace phones.Controllers
                     return BadRequest();
 
 
+                foreach (var x in _context.Phones)
+                {
+                    if (phone.Phonenumber == x.Phonenumber)
+                    {
+                        return NotFound(new
+                        {
+                            StatusCode = 404,
+                            message = $"Böyle bir numaraya sahip başka birisi var."
+                        }
+                            );
+                    }
+                }
+
+
                 foreach (var number in _context.Phones)
                 {
                     if (number.StudentId == phone.StudentId)
@@ -82,7 +96,7 @@ namespace phones.Controllers
                                 StatusCode = 404,
                                 message = $"Zaten bu kişinin öncelikli numarası var."
                             });
-                        } 
+                        }
                     }
 
                 }
@@ -135,6 +149,35 @@ namespace phones.Controllers
             }
 
         }
+        [HttpDelete("{id:int}")]
+        public IActionResult DeleteOnePhone([FromRoute(Name = "id")] int id)
+        {
+            try
+            {
+                var entitiy = _context
+                .Phones
+                .Where(s => s.Id.Equals(id))
+                .SingleOrDefault();
 
+                if (entitiy is null)
+                    return NotFound(new
+                    {
+                        StatusCode = 404,
+                        message = $"Girilen id: {id}, Böyle bir id Bulunamadı."
+                    });
+
+                _context.Phones.Remove(entitiy);
+                _context.SaveChanges();
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+
+
+        }
     }
+
 }
